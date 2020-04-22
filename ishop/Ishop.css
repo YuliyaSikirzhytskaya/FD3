@@ -1,0 +1,50 @@
+.Ishop
+{
+  border: double gray 3px;
+  width: 350px;
+  padding: 3px 7px;
+  background-color: #F0F0F0;
+  margin: 0 auto;
+}
+
+.Ishop .Info
+{
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+
+.Ishop .Goods
+{
+  padding: 15px;
+}
+
+.Ishop .Goods .Item
+{
+  padding: 15px 0;
+}
+
+.Ishop .Goods .Item .Count 
+{
+  float: right;
+  width: 50px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.Ishop .Goods .Item .Price 
+{
+  float: right;
+  width: 50px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.Ishop .Goods .Item .Name
+{
+  float: left;
+  margin-right: 30px;
+  font-weight: bold;
+  width: 80px;
+  
+}
