@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>Ishop2</title>
+</head> 
+<body> 
+  <div id="container"></div> 
+      
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src="ishop2.js"></script>
+  <link rel="stylesheet" type="text/css" href="ishop2.css" />
+  <script src="products.js"></script>
+  <link rel="stylesheet" type="text/css" href="products.css" />
+
+  <script>
+
+    var goodsArr=[ 
+      {name:'Name',code:1,price:'Price',URL:'URL',count:'Quantity',control:'Control'},
+      {name:'карандаш',code:2,price:5,URL:'img/1.jpg',count:222}, 
+      {name:'ручка',code:3,price:8,URL:'img/2.jpg',count:123}, 
+      {name:'линейка',code:4,price:3,URL:'img/3.jpg',count:444},
+      {name:'ластик',code:5,price:6,URL:'img/4.jpg',count:666},
+      {name:'тетрадь',code:6,price:10,URL:'img/5.jpg',count:353},
+      {name:'альбом',code:7,price:13,URL:'img/6.jpg',count:254},
+    ];
+
+    ReactDOM.render(
+      React.createElement(Ishop2,{goods:goodsArr}),
+      document.getElementById('container') 
+    );
+
+  </script>
+
+</body> 
+</html>

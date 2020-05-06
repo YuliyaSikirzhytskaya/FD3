@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" />
+  <title>filter</title>
+</head> 
+<body> 
+  <div id="container"></div> 
+      
+  <script src="https://unpkg.com/react@15/dist/react.js"></script> 
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script> 
+      
+  <script src="filter.js"></script>
+  <link rel="stylesheet" type="text/css" href="filter.css" />
+
+  <script>
+
+    var textArr=[ 
+      {text:'человеконенавистничество',code:1}, 
+      {text:'высокопревосходительство',code:2}, 
+      {text:'одиннадцатиклассница',code:3},
+      {text:'делопроизводительница',code:4},
+      {text:'переосвидетельствоваться',code:5},
+      {text:'телеграммааппарат',code:6},
+      {text:'водогрязеторфопарафинолечение',code:7}, 
+      {text:'превысокомногорассмотрительствующий',code:8}
+    ];
+
+    var defaultFreeAnswerText="";
+
+    ReactDOM.render(
+      React.createElement(Filter,{words:textArr,deffreeanswertext: defaultFreeAnswerText}), 
+      document.getElementById('container') 
+    );
+
+  </script>
+
+</body> 
+</html>

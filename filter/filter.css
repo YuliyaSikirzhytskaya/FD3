@@ -1,0 +1,13 @@
+.List {
+    overflow: scroll; /* Добавляем полосы прокрутки */
+    overflow-x: hidden;
+    width: 300px; /* Ширина блока */
+    height: 100px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+    border: solid 1px black; /* Параметры рамки */
+
+   } 
+
+.FilterText {
+  margin: 5px 25px;  
+}
