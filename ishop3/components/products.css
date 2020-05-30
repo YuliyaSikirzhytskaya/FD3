@@ -1,0 +1,64 @@
+.Ishop
+{
+  border: double gray 3px;
+  width: 510px;
+  
+  background-color: #F0F0F0;
+  margin: 0 auto;
+  font-size: 20px;
+  
+}
+.Ishop .Goods  .Count 
+{
+  border: solid gray 1px;
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Ishop .Goods .Price
+{
+  border: solid gray 1px;
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Ishop .Goods .Name
+{
+  border: solid gray 1px;
+  float: left;
+  font-weight: bold;
+  width: 100px;
+  
+}
+.Ishop .Goods  .Control 
+{
+  border: solid gray 1px;
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+.Ishop .Goods  .URL 
+{
+  border: solid gray 1px;
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.red
+{
+    background-color: #bfa4da;
+    height: 26px;
+}
+.white
+{
+    border-style: solid 1px black;
+    height: 26px;
+
+}
