@@ -36,8 +36,8 @@ class Ishop3 extends React.Component {
     this.setState( {selectedProductCode:code,workMode:workMode} );
   }
 
-  deleteProduct = (code) =>{ 
-    this.setState({stateGoods:this.state.stateGoods.filter(item => item.code !== code)})
+  deleteProduct = (code,mode) =>{ 
+    this.setState({stateGoods:this.state.stateGoods.filter(item => item.code !== code),workMode:0})
   }
   
   EditProduct = (code, mode) =>{
@@ -85,6 +85,7 @@ class Ishop3 extends React.Component {
                               URL={""} 
                               cbSave={this.SaveProduct} 
                               cbCancel={this.CancelEdit}
+                              cbStop={this.Stop}
                               workMode={2}/>
   this.setState({workMode:2,selectedProductCode:0})
   }
@@ -109,7 +110,7 @@ class Ishop3 extends React.Component {
         <div className='Ishop'>
           <div className='Goods'>{goodsList}</div>
         </div>
-        <div className='NewButton'><input type={'button'} value={'New Product'} onClick={this.NewButton}/></div>
+        <div className='NewButton'><input type={'button'} value={'New Product'} disabled={this.state.StopBlock} onClick={this.NewButton}/></div>
       </div>
     );}
     else {
@@ -118,7 +119,7 @@ class Ishop3 extends React.Component {
         <div className='Ishop'>
           <div className='Goods'>{goodsList}</div>
         </div>
-        <div className='NewButton'><input type={'button'} value={'New Product'} onClick={this.NewButton}/></div>
+        <div className='NewButton'><input type={'button'} value={'New Product'} disabled={this.state.StopBlock} onClick={this.NewButton}/></div>
         <div className='EditComp'>{this.state.EditComp}</div>
       </div>
       );

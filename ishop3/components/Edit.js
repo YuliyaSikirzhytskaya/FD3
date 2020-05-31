@@ -18,22 +18,32 @@ class Edit extends React.Component{
       URL: this.props.URL,
       count: this.props.count,
       workMode:this.props.workMode,
+      stopBlock:true,
   }
   NameChanged=(EO)=>{
-      this.setState({name:EO.target.value})
+      this.setState({name:EO.target.value},this.Validate)
       this.props.cbStop()
   }
   PriceChanged=(EO)=>{
-    this.setState({price:EO.target.value})
+    this.setState({price:EO.target.value},this.Validate)
     this.props.cbStop()
   }
   URLChanged=(EO)=>{
-    this.setState({URL:EO.target.value})
+    this.setState({URL:EO.target.value},this.Validate)
     this.props.cbStop()
   }
   CountChanged=(EO)=>{
-    this.setState({count:EO.target.value})
+    this.setState({count:EO.target.value},this.Validate)
     this.props.cbStop()
+  }
+  Validate = function(){
+      var isValid = false
+      if (this.state.name =="" || this.state.price =="" || this.state.URL =="" || this.state.count =="")
+        {isValid = true}
+      else{
+        isValid = false;
+      } 
+      this.setState({stopBlock:isValid});
   }
 
   Save=(EO)=>{
@@ -60,7 +70,7 @@ class Edit extends React.Component{
               <div>
               <span className={'Count'}>{'Count'}</span><input tupe='text' name='countValue' onChange={this.CountChanged} defaultValue={this.state.count}/>{(this.state.count =="" ) && <span className={'Error'}>{'Please,fill the field.'}</span>}
           </div>
-          <span><input type={'button'} value={'Save'} onClick={this.Save}/><input type={'button'} value={'Cancel'} onClick={this.Cancel}/></span>
+          <span><input type={'button'} value={'Save'} disabled={this.state.stopBlock} onClick={this.Save}/><input type={'button'} value={'Cancel'} onClick={this.Cancel}/></span>
         </div>
       );
     }
@@ -79,7 +89,7 @@ class Edit extends React.Component{
               <div>
               <span className={'Count'}>{'Count'}</span><input tupe='text' name='countValue' onChange={this.CountChanged} defaultValue={''}/>{(this.state.count =="" ) && <span className={'Error'}>{'Please,fill the field.'}</span>}
           </div>
-          <span><input type={'button'} value={'Add'} onClick={this.Save}/><input type={'button'} value={'Cancel'} onClick={this.Cancel}/></span>
+          <span><input type={'button'} value={'Add'} disabled={this.state.stopBlock} onClick={this.Save}/><input type={'button'} value={'Cancel'} onClick={this.Cancel}/></span>
         </div>
       );
 

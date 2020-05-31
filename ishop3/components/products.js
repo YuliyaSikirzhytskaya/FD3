@@ -23,7 +23,7 @@ class Products extends React.Component{
   delete = () => {
     if (this.props.workMode==2 || this.props.stopBlock){return}
     if (confirm("Вы уверены?")){
-      this.props.cbDelete(this.props.code);
+      this.props.cbDelete(this.props.code,0);
     }
   }
 
@@ -34,12 +34,12 @@ class Products extends React.Component{
   }
 
   render() {
-    return <div className={this.props.selectedProductCode==this.props.code?'red':'white'} onClick={this.productClicked}>
-        <span className={'Name'}>{this.props.name}</span>
-        <span className={'Price'}>{this.props.price}</span>
-        <span className={'URL'}>{this.props.URL}</span>
-        <span className={'Count'}>{this.props.count}</span>
-        {(this.props.control)?<span className={'Control'}>{this.props.control}</span>:<span className={'Control'}><input type={'button'} value={'Edit'} onClick={this.Edit}/><input type={'button'} value={'Delete'} onClick={this.delete}/></span>}
+    return <div className={this.props.selectedProductCode==this.props.code?'red':'white'}>
+        <span className={'Name'} onClick={this.productClicked}>{this.props.name}</span>
+        <span className={'Price'} onClick={this.productClicked}>{this.props.price}</span>
+        <span className={'URL'} onClick={this.productClicked}>{this.props.URL}</span>
+        <span className={'Count'} onClick={this.productClicked}>{this.props.count}</span>
+        {(this.props.control)?<span className={'Control'}>{this.props.control}</span>:<span className={'Control'}><input type={'button'} value={'Edit'} disabled={this.props.stopBlock} onClick={this.Edit}/><input type={'button'} value={'Delete'} disabled={this.props.stopBlock} onClick={this.delete}/></span>}
     </div>
 }}
 
