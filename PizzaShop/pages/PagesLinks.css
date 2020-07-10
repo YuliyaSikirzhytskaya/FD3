@@ -1,0 +1,20 @@
+.PageLink {
+    color: black;
+    margin-right: 25px;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+.ActivePageLink {
+    font-weight: bold;
+}
+
+.Menu {
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightsalmon;
+}
