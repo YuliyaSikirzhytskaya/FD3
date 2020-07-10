@@ -51,7 +51,7 @@ class Ishop3 extends React.Component {
                               cbStop={this.Stop} 
                               cbSave={this.SaveProduct} 
                               cbCancel={this.CancelEdit}
-                              workMode={1}/>
+                              workMode={mode}/>
   this.setState({EditComp: this.state.EditComp,workMode:mode})
   }
 

@@ -21,19 +21,19 @@ class Edit extends React.Component{
       stopBlock:true,
   }
   NameChanged=(EO)=>{
-      this.setState({name:EO.target.value},this.Validate)
+      this.setState({name:EO.target.value,workMode:this.props.workMode},this.Validate)
       this.props.cbStop()
   }
   PriceChanged=(EO)=>{
-    this.setState({price:EO.target.value},this.Validate)
+    this.setState({price:EO.target.value,workMode:this.props.workMode},this.Validate)
     this.props.cbStop()
   }
   URLChanged=(EO)=>{
-    this.setState({URL:EO.target.value},this.Validate)
+    this.setState({URL:EO.target.value,workMode:this.props.workMode},this.Validate)
     this.props.cbStop()
   }
   CountChanged=(EO)=>{
-    this.setState({count:EO.target.value},this.Validate)
+    this.setState({count:EO.target.value,workMode:this.props.workMode},this.Validate)
     this.props.cbStop()
   }
   Validate = function(){
