@@ -1,4 +1,5 @@
 import React from 'react';
+import {voteEvents} from './events'
 
 import './PizzaInfo.css';
 
@@ -7,7 +8,9 @@ const workMode2 = 2; // More informative preview
 
 class PizzaInfo extends React.Component {
 
-
+  bucketClicked = (EO) => {
+    voteEvents.emit('bucketClicked',this.props.id);
+  }
 
   render() {
 
@@ -16,7 +19,7 @@ class PizzaInfo extends React.Component {
         <div className="PizzaInfoDefault">
           <div className="PizzaName">{this.props.name}</div>
           <div className="PizzaImg"><img src={"../Resources/" + this.props.id + ".jpg"}></img></div>
-          <div className="PizzaPrice">{this.props.price + ' руб.'}<input className="BucketButton" type={'button'} value={'В Корзину'}/></div>
+          <div className="PizzaPrice">{this.props.price + ' руб.'}<input className="BucketButton" type={'button'} value={'В Корзину'} onClick={this.bucketClicked}/></div>
         </div>
       );
     }
