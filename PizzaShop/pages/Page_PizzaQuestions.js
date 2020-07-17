@@ -1,12 +1,12 @@
 import React from 'react';
-import PizzaQuestions from '../components/PizzaQuestions';
+import Questions from '../components/Questions';
 
 class Page_PizzaQuestions extends React.PureComponent {
           
   render() {
 
     return (
-      <PizzaQuestions
+      <Questions
       />
     );
     

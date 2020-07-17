@@ -31,7 +31,7 @@ class PizzaList extends React.PureComponent {
     var pizzaList = this.props.pizza.data.map((pizzaInfo) => <PizzaInfo workMode={this.state.workMode} name={pizzaInfo.name} key={pizzaInfo.id} id={pizzaInfo.id} price={pizzaInfo.price} contains={pizzaInfo.contains} />)
     var updatedPizzList = [];
 
-    for(var i = 0; i<= Math.round(pizzaList.length/3); i++)
+    for(var i = 0; i<= Math.round(pizzaList.length); i++)
     {
         if((i+3)<pizzaList.length){
             updatedPizzList.push(<PizzaInfoRow key={i}>{pizzaList.slice(i, i+3)}</PizzaInfoRow>)
@@ -39,8 +39,8 @@ class PizzaList extends React.PureComponent {
         else{
             updatedPizzList.push(<PizzaInfoRow key={i}>{pizzaList.slice(i, pizzaList.length)}</PizzaInfoRow>)
         }
+        i+=2;
     }
-
 
     return (
       <div>

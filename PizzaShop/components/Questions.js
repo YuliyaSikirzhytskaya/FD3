@@ -1,25 +1,26 @@
 import React from 'react';
-import './Bucket.css';
-
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import combinedReducer from '../redux/reducers.js';
 
-import BucketList from './BucketList';
+import combinedReducer from '../redux/reducers.js';
+import PizzaQuestions from './PizzaQuestions';
+
+import './Questions.css';
 
 let store=createStore(combinedReducer, applyMiddleware(thunk));
 
-class Bucket extends React.Component {
+class Questions extends React.Component {
+  
 
   render() {
 
     return (
       <Provider store={store}>
-          <BucketList />
+          <PizzaQuestions />
       </Provider>
     );
   }
 }
 
-export default Bucket;
+export default Questions;

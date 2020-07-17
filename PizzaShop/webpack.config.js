@@ -30,5 +30,9 @@ module.exports = {
     },
     plugins: [
         extractCSS
-    ]
+    ],
+    devServer: {
+
+        historyApiFallback: true
+    }
 }

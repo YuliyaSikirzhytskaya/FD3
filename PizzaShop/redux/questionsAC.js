@@ -14,10 +14,10 @@ const questionsErrorAC=function() {
   };
 }
 
-const questionsSetAC=function(questions) {
+const questionsSetAC=function(info) {
   return {
     type: QUESTIONS_SET,
-    questions:questions,
+    info:info,
   };
 }
 

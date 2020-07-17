@@ -1,4 +1,4 @@
-import { QUESTIONS_LOADING, QUESTIONS_ERROR, QUESTIONS_SET } from './questionsAC';
+import { BUCKET_LOADING, BUCKET_ERROR, BUCKET_SET } from './bucketAC';
 
 const initState={
 
@@ -7,10 +7,10 @@ const initState={
 
 }
 
-function questionsReducer(state=initState,action) {
+function bucketReducer(state=initState,action) {
   switch (action.type) {
 
-    case QUESTIONS_LOADING: {
+    case BUCKET_LOADING: {
       let newState={
         status:1,
         data:null,
@@ -18,7 +18,7 @@ function questionsReducer(state=initState,action) {
       return newState;
     }
 
-    case QUESTIONS_ERROR: {
+    case BUCKET_ERROR: {
       let newState={
         status:2,
         data:null,
@@ -26,10 +26,10 @@ function questionsReducer(state=initState,action) {
       return newState;
     }
 
-    case QUESTIONS_SET: {
+    case BUCKET_SET: {
       let newState={
         status:3,
-        data:action.info,
+        data:action.bucket,
       };
       return newState;
     }
@@ -39,4 +39,4 @@ function questionsReducer(state=initState,action) {
   }
 }
 
-export default questionsReducer;
+export default bucketReducer;

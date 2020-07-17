@@ -1,0 +1,13 @@
+.BucketInfoDefault{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.BucketInfoItem {
+    color: black;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+.BucketListDefault{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.BucketHeaders {
+    color: brown;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+}
+
+.Total{
+    color:black;
+    font-size: 35px;
+    text-align: right;
+    margin-top: 20px
+}
+
+.PayButtonDiv{
+    text-align: right;
+    margin-top: 10px;
+}
+
+.BucketPayButton {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 5px;
+    border: 2px solid #494949 !important;
+    border-radius: 3%;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    margin-left: 10px;
+}
+
+.BucketPayButton:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}

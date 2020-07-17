@@ -9,7 +9,7 @@ const workMode2 = 2; // More informative preview
 class PizzaInfo extends React.Component {
 
   bucketClicked = (EO) => {
-    voteEvents.emit('bucketClicked',this.props.id);
+    voteEvents.emit('bucketClicked',this.props.id, this.props.name, this.props.price);
   }
 
   render() {
