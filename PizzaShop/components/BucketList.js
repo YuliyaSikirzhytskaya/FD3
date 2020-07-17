@@ -18,8 +18,19 @@ class BucketList extends React.Component {
 
 
   state = {
-    reload: false
+    reload: false,
+    info: "",
+    valid: false
   };
+
+  onInfoFilled = (EO) => { 
+    if(EO.target.value !="")
+    {
+      this.setState({info:EO.target.value, valid:true})
+    }else{
+      this.setState({info:EO.target.value, valid:false})
+    }
+  }
 
   componentDidMount() {
     this.props.dispatch( bucketThunkAC(this.props.dispatch));
@@ -57,7 +68,12 @@ class BucketList extends React.Component {
         </div>
         {bucketList}
       <div className="Total">Всего: {Math.round(parseFloat(totalPrice).toFixed(2)*100)/100 + " руб."}</div>
-      <div className="PayButtonDiv"><NavLink to="/" exact><input className="BucketPayButton" type={'button'} value={'Заказать'} onClick={this.payTheBill}/></NavLink></div>
+      <div className="ContactInfo">
+        <div className="PayButtonDiv">Введите контактную информацию: <input type='text' name='mobile' className='mobile' defaultValue={this.state.info} onChange={this.onInfoFilled}/></div>
+        {(this.state.valid)&&
+        <div className="PayButtonDiv"><NavLink to="/" exact><input className="BucketPayButton" type={'button'} value={'Заказать'} onClick={this.payTheBill}/></NavLink></div>
+        }
+        </div>
       </div>
     )}
     else{
